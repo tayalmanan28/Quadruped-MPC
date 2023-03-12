@@ -1,2 +1,2 @@
 # Quadruped-MPC
-Collision Cone CBF for Quadruped
+Model Prictive Control for Quadruped
