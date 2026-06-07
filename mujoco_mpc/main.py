@@ -106,8 +106,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--gait-period", type=float, default=0.5)
     p.add_argument("--duty", type=float, default=0.6)
     p.add_argument("--swing-height", type=float, default=0.06)
-    p.add_argument("--horizon", type=int, default=14)
-    p.add_argument("--mpc-dt", type=float, default=0.02)
+    p.add_argument("--horizon", type=int, default=30)
+    p.add_argument("--mpc-dt", type=float, default=0.01)
     p.add_argument("--mu", type=float, default=0.6)
     p.add_argument("--body-height", type=float, default=0.27)
     p.add_argument("--duration", type=float, default=0.0,

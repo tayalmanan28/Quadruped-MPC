@@ -16,16 +16,16 @@ class ControllerConfig:
     body_height: float = 0.27
     swing_height: float = 0.06
     raibert_k: float = 0.03
-    mpc_rate_hz: float = 50.0
+    mpc_rate_hz: float = 100.0
     # Velocity reference filter time-constant (s). Larger values smooth velocity
     # step-commands but reduce tracking gain. ~0.01 is essentially "no filter".
     vel_tau: float = 0.01
     # Per-axis multiplier on the trunk inertia used by the MPC. Trunk-only
     # values massively underestimate ``I_yy`` and especially ``I_zz`` because
-    # the four legs spread out below and to the sides of the trunk. Bumping
-    # them lets the MPC command proportionally larger moments so yaw/pitch
-    # commands actually track.
-    inertia_scale_xyz: tuple = (1.0, 2.0, 10.0)
+    # the four legs spread out below and to the sides of the trunk. The yaw
+    # multiplier in particular makes yaw commands actually track — dropping
+    # it back to 1.0 gives only ~5% of commanded yaw rate.
+    inertia_scale_xyz: tuple = (1.0, 2.0, 18.0)
     # Body-frame velocity command
     cmd_vx: float = 0.0
     cmd_vy: float = 0.0

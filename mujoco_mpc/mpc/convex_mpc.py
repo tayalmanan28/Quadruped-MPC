@@ -57,8 +57,8 @@ DEFAULT_R = 1e-5
 
 @dataclass
 class MPCConfig:
-    horizon: int = 14
-    dt: float = 0.02
+    horizon: int = 30
+    dt: float = 0.01
     mu: float = 0.6
     f_min: float = 0.0
     f_max: float = 250.0
